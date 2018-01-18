@@ -6,6 +6,18 @@ to get your own copy of the repository.
 
 ## Setup
 
+### Downloading the new repository
+
+Using the command line, navigate to the folder containing your React Native
+projects, then run `git clone` followed by your forked repository's URL. As an
+example, I can run `git clone https://github.com/Dallas-J/EnhancedSnake` to
+download my repository (don't use mine though, use yours)!
+
+Once you have the repository downloaded, `cd` into the new folder and run
+`npm install` to install dependencies.
+
+### Modifying your development environment
+
 Though you all should have functional development environments, we will want to
 do a few things differently to ensure that our applications perform well.
 
