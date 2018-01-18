@@ -1,0 +1,158 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _class,
+    _temp,
+    _jsxFileName = '/home/dallas/App Development/EnhancedSnake/app/components/Controls.js';
+
+var _reactNative = require('react-native');
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    Controls: {
+        displayName: 'Controls'
+    }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: '/home/dallas/App Development/EnhancedSnake/app/components/Controls.js',
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+}
+
+var Controls = _wrapComponent('Controls')((_temp = _class = function (_Component) {
+    _inherits(Controls, _Component);
+
+    function Controls() {
+        _classCallCheck(this, Controls);
+
+        return _possibleConstructorReturn(this, (Controls.__proto__ || Object.getPrototypeOf(Controls)).apply(this, arguments));
+    }
+
+    _createClass(Controls, [{
+        key: 'render',
+        value: function render() {
+            var _props = this.props,
+                moveUp = _props.moveUp,
+                moveDown = _props.moveDown,
+                moveLeft = _props.moveLeft,
+                moveRight = _props.moveRight;
+
+            return _react3.default.createElement(
+                _reactNative.View,
+                {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 21
+                    }
+                },
+                _react3.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    { onPress: moveUp, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 22
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        { style: { fontSize: 150 }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 23
+                            }
+                        },
+                        '\u25B2'
+                    )
+                ),
+                _react3.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    { onPress: moveLeft, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 27
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        { style: { fontSize: 150 }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 28
+                            }
+                        },
+                        '\u25C0'
+                    )
+                ),
+                _react3.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    { onPress: moveRight, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 32
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        { style: { fontSize: 150 }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 33
+                            }
+                        },
+                        '\u25B6'
+                    )
+                ),
+                _react3.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    { onPress: moveDown, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 37
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        { style: { fontSize: 150 }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 38
+                            }
+                        },
+                        '\u25BC'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Controls;
+}(_react2.Component), _class.propTypes = {
+    moveUp: _propTypes2.default.func.isRequired,
+    moveDown: _propTypes2.default.func.isRequired,
+    moveLeft: _propTypes2.default.func.isRequired,
+    moveRight: _propTypes2.default.func.isRequired
+}, _temp));
+
+exports.default = Controls;
