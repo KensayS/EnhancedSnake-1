@@ -15,6 +15,7 @@ export default class Block extends Component {
   }
 
   render() {
+    
     const { type, size, decay } = this.props;
 
     let snakeColor = colors.green1;

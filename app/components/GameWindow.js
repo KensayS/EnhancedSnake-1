@@ -95,10 +95,6 @@ export default class GameWindow extends Component {
         break;
     }
 
-    // Since none of the movement functions are implemented yet, blocks will
-    // be undefined at this point. We need to define it for now.
-    // **REMOVE THIS LINE BEFORE TESTING**
-    blocks = this.state.blocks.slice();
 
     // Decay the blocks based on their decay values. This is what prevents the
     // snake from getting longer on each movement. If a food decays, we place
@@ -122,18 +118,36 @@ export default class GameWindow extends Component {
     // for? The function checkAndMove() defined below will automatically do the
     // movement to the array index it is given, and it will return a modified
     // block array for you.
+    const { verticalBlocks, blocks } = this.state;
+    if(this.headPosition < verticalBlocks)
+      return this.checkAndMove(this.headPosition + blocks.length - verticalBlocks);
+    else
+    return this.checkAndMove(this.headPosition - verticalBlocks);
   }
 
   moveRight = () => {
-    // TODO move right
+    const { verticalBlocks, blocks } = this.state;
+    if(this.headPosition >= blocks.length - verticalBlocks)
+      return this.checkAndMove(this.headPosition - blocks.length + verticalBlocks);
+    else
+    return this.checkAndMove(this.headPosition + verticalBlocks);
+  
   }
 
   moveUp = () => {
-    // TODO move up
+    const { verticalBlocks } = this.state;
+    if(this.headPosition % verticalBlocks === 0)
+      return this.checkAndMove(this.headPosition + verticalBlocks -1);
+    else 
+      return this.checkAndMove(this.headPosition - 1);
   }
 
   moveDown = () => {
-    // TODO move down
+    const { verticalBlocks } = this.state;
+    if((this.headPosition + 1) % verticalBlocks === 0)
+      return this.checkAndMove(this.headPosition - verticalBlocks +1);
+    else  
+      return this.checkAndMove(this.headPosition + 1)
   }
 
   checkAndMove = (location) => {
@@ -208,7 +222,7 @@ export default class GameWindow extends Component {
 
     // Map our array of blocks to renderable Block elements
     const renderedBlocks = blocks.map((block, index) => {
-      return <Block type={block.type} size={blockSize} decay={block.decay} key={index}/>;
+      return <Block type={block.type} size={blockSize} decay={block.decay} key={index}/>
     });
 
     return (

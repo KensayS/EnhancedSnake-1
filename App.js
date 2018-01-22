@@ -19,7 +19,7 @@ export default class App extends Component {
     this.state = {
       height,
       width,
-      direction: 'right',
+      direction: 'left',
       smallDimension,
       score: 0,
     }
@@ -57,7 +57,7 @@ export default class App extends Component {
           height={height * 0.7}
           width={width - 4}
           direction={direction}
-          eat={() => {}}
+          eat={() => this.setState({ score: score + 10})}
           lose={() => {}}
         />
         <View
